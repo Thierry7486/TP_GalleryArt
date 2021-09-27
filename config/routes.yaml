@@ -1,0 +1,55 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+dashboard:
+  path: admin/dashboard
+  controller: App\Controller\Admin\DashboardController::indexAction
+
+dashboard_list_events:
+  path: admin/dashboard/events/list
+  controller: App\Controller\Admin\Events\EventsAdminController::listAction
+
+dashboard_create_event:
+  path: admin/dashboard/event/new
+  controller: App\Controller\Admin\Events\EventsAdminController::newAction
+
+dashboard_update_event:
+  path: admin/dashboard/event/{id}/update
+  controller: App\Controller\Admin\Events\EventsAdminController::updateAction
+
+dashboard_delete_event:
+  path: admin/dashboard/event/{id}/delete
+  controller: App\Controller\Admin\Events\EventsAdminController::deleteAction
+
+dashboard_list_artists:
+  path: admin/dashboard/artists/list
+  controller: App\Controller\Admin\Artists\ArtistsAdminController::listAction
+
+dashboard_create_artist:
+  path: admin/dashboard/artist/new
+  controller: App\Controller\Admin\Artists\ArtistsAdminController::newAction
+
+dashboard_update_artist:
+  path: admin/dashboard/artist/{id}/update
+  controller: App\Controller\Admin\Artists\ArtistsAdminController::updateAction
+
+dashboard_delete_artist:
+  path: admin/dashboard/artist/{id}/delete
+  controller: App\Controller\Admin\Artists\ArtistsAdminController::deleteAction
+
+dashboard_list_pieceArt:
+  path: admin/dashboard/pieceArt/list
+  controller: App\Controller\Admin\PieceArt\PieceArtAdminController::listAction
+
+dashboard_create_pieceArt:
+  path: admin/dashboard/pieceArt/new
+  controller: App\Controller\Admin\PieceArt\PieceArtAdminController::newAction
+
+dashboard_update_pieceArt:
+  path: admin/dashboard/pieceArt/{id}/update
+  controller: App\Controller\Admin\PieceArt\PieceArtAdminController::updateAction
+
+dashboard_delete_pieceArt:
+  path: admin/dashboard/pieceArt/{id}/delete
+  controller: App\Controller\Admin\PieceArt\PieceArtAdminController::deleteAction

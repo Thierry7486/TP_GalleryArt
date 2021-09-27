@@ -1,0 +1,38 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+
+<div class="h-full w-full flex items-center justify-center">
+
+{{ form_start(artist_form) }}
+
+	<p class="text-gray-500">
+	{{ form_label(artist_form.name) }}
+	</p>
+	<div>
+		{{ form_widget(artist_form.name, { attr : {'class' : 'border border-gray-400 rounded-lg'}}) }}
+	</div>
+	<p class="text-gray-500">
+	{{ form_label(artist_form.firstname) }}
+	</p>
+	<div>
+		{{ form_widget(artist_form.firstname, { attr : {'class' : 'border border-gray-400 rounded-lg'}}) }}
+	</div>
+	<p class="text-gray-500">
+	{{ form_label(artist_form.nationality) }}
+	</p>
+	<div>
+		{{ form_widget(artist_form.nationality, { attr : {'class' : 'border border-gray-400 rounded-lg'}}) }}
+	</div>
+	<p class="text-gray-500">
+	{{ form_label(artist_form.description) }}
+	</p>
+	<div>
+		{{ form_widget(artist_form.description, { attr : {'class' : 'border border-gray-400 rounded-lg'}}) }}
+	</div>
+	
+
+{{ form_end(artist_form) }}
+
+</div>
+{% endblock %}

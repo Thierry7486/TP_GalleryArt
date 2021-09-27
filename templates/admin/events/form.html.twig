@@ -1,0 +1,22 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+
+<div class="h-full w-full flex items-center justify-center">
+
+{{ form_start(event_form) }}
+
+	<p class="text-gray-500">
+	{{ form_label(event_form.name) }}
+	</p>
+	<div>
+		{{ form_widget(event_form.name, { attr : {'class' : 'border border-gray-400 rounded-lg'}}) }}
+	</div>
+	<div class="mt-5 ">
+		{{ form_widget(event_form.date, { attr : {'class' : 'p-2 px-3 bg-green-400 rounded-lg'}}) }}
+	</div>
+
+{{ form_end(event_form) }}
+
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+<div class="w-full h-full flex flex-col text-center">	
+	<div class="flex flex-col bg-gray-900">
+		<h2 class="my-5 font-bold pl-3 uppercase text-gray-300">Bonjour administrateur !</h2>
+		
+	</div>
+	<div class="flex flex-col">
+		<h3 class="mt-4 mb-2 font-bold pl-3 underline">Évènements</h3>
+		<div class="flex flex-col pl-4 ">
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y+1 hover:scale-110 " href="{{ path('dashboard_create_event') }}">Créer</a>
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y-1 hover:scale-110" href="{{ path('dashboard_list_events') }}">Lister</a>
+		</div>	
+	</div>
+	<div class="flex flex-col mt-2">
+		<h3 class="my-2 font-bold pl-3 underline">Clients</h3>
+		<div class="flex flex-col pl-4 ">
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y+1 hover:scale-110 " href="">Créer</a>
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y-1 hover:scale-110" href="">Lister</a>
+		</div>	
+	</div>
+	<div class="flex flex-col mt-2">
+		<h3 class="my-2 font-bold pl-3 underline">Artistes</h3>
+		<div class="flex flex-col pl-4 ">
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y+1 hover:scale-110 " href="{{ path('dashboard_create_artist') }}">Créer</a>
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y-1 hover:scale-110" href="{{ path('dashboard_list_artists') }}">Lister</a>
+		</div>	
+	</div>
+	<div class="flex flex-col mt-2">
+		<h3 class="my-2 font-bold pl-3 underline">Oeuvres d'art</h3>
+		<div class="flex flex-col pl-4 ">
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y+1 hover:scale-110 " href="{{ path('dashboard_create_pieceArt') }}">Créer</a>
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y-1 hover:scale-110" href="{{ path('dashboard_list_pieceArt') }}">Lister</a>
+		</div>	
+	</div>
+	<div class="flex flex-col mt-2">
+		<h3 class="my-2 font-bold pl-3 underline">Enchères initiales</h3>
+		<div class="flex flex-col pl-4 ">
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y+1 hover:scale-110 " href="">Créer</a>
+			<a class="mb-1 transition duration-500 ease-in-out hover:underline transform hover:-translate-y-1 hover:scale-110" href="">Lister</a>
+		</div>	
+	</div>
+
+
+	{% if app.user %}<a class="pl-3 mt-12 hover:underline text-blue-600" href="{{ path('app_logout') }}">Logout</a>{% endif %}
+</div>

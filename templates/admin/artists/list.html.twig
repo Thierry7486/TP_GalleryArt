@@ -1,0 +1,31 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+	<div class="flex w-full h-full justify-center items-center">
+		<table class="table-auto">
+			<tr>
+			<th >id</th>
+			<th>nom</th>
+			<th>prénom</th>			
+			<th>nationalité</th>			
+			<th>description</th>			
+			<th>action</th>			
+			</tr>
+
+			{% for artist in artists %}
+			<tr>
+			<td >{{ artist.id }}</td>
+			<td>{{ artist.name }}</td>
+			<td>{{ artist.firstname }}</td>
+			<td>{{ artist.nationality }}</td>
+			<td>{{ artist.description }}</td>
+			<td>
+			<a href="{{ path('dashboard_update_artist', {id: artist.id}) }}" class="text-green-500 cursor-pointer">éditer</a>
+			<a href="{{ path('dashboard_delete_artist', {id: artist.id}) }}" class="text-red-500 cursor-pointer">supprimer</a>
+			</td>
+			</tr>	
+			{% endfor %}
+		</table>	
+	</div>
+{% endblock %}
+

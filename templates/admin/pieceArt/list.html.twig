@@ -1,0 +1,38 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+	<div class="flex w-full h-full justify-center items-center">
+		<table class="table-auto">
+			<tr>
+			<th >id</th>
+			<th>nom</th>
+			<th>description</th>			
+			<th>date</th>			
+			<th>photo</th>			
+			<th>artiste</th>			
+			<th>action</th>			
+			</tr>
+
+			{% for pieceArt in pieceArts %}
+			<tr>
+			<td >{{ pieceArt.id }}</td>
+			<td>{{ pieceArt.name }}</td>
+			<td>{{ pieceArt.description| slice(0,30) }} ...</td>
+			<td>{{ pieceArt.date |date("m/d/Y") }}</td>
+			<td><img width="100px" height="auto" src="{% if 'https' in pieceArt.photo %}
+			{{ pieceArt.photo }}
+			{% else %}
+			{{ asset('uploads/pieceArt/'~pieceArt.photo) }}
+			{% endif %}
+			" alt="{{ pieceArt.name }}"></td>
+			<td>{{ pieceArt.artist.name }}</td>
+			<td>
+			<a href="{{ path('dashboard_update_pieceArt', {id: pieceArt.id}) }}" class="text-green-500 cursor-pointer">éditer</a>
+			<a href="{{ path('dashboard_delete_pieceArt', {id: pieceArt.id}) }}" class="text-red-500 cursor-pointer">supprimer</a>
+			</td>
+			</tr>	
+			{% endfor %}
+		</table>	
+	</div>
+{% endblock %}
+
